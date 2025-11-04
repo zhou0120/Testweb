@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>91.com</title>
+    <script src="./com.js"></script>
+    <link rel="stylesheet" href="web.html/1.css" />
+</head>
+<body>
+    <b><h1>18歲以下禁止觀看</h1></b>
+    <hr>
+    <!-- 图片 -->
+    <button id="showBtn" type="button">Click Me!</button>
+    <div id="imgContainer" style="margin-top:10px;">
+        <img id="pic" src="http://10.103.212.91:8888/Photo/WechatIMG397.jpg" title="hlw艳照" alt="无法显示" width="200" height="200" style="display:none;">
+    </div>
+    <p>
+        <audio controls>
+            <source src="#" type="audio/mpeg">
+            未找到音频
+        </audio>
+    </p>
+    <p>
+        <video width="320" height="240" controls autoplay>
+            <source src="http://10.103.212.91:8888/mp4/56_1762263643.mp4" type="video/mp4">
+            not found
+        </video>
+    </p>
+    
+</body>
+<script>
+    // 显示/隐藏图片（避免在 onclick 中嵌入 HTML）
+    (function(){
+        var btn = document.getElementById('showBtn');
+        var pic = document.getElementById('pic');
+        if (!btn || !pic) return;
+        btn.addEventListener('click', function(){
+            if (pic.style.display === 'none' || pic.style.display === ''){
+                pic.style.display = 'block';
+                btn.textContent = 'Hide';
+            } else {
+                pic.style.display = 'none';
+                btn.textContent = 'Click Me!';
+            }
+        });
+    })();
+</script>
+</html>
